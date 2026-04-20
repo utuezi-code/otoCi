@@ -446,7 +446,7 @@ export default function InscriptionForm() {
                 <button onClick={() => { setStep(1); window.scrollTo({top:0,behavior:'smooth'}); }} style={{padding:'15px 28px',border:'1px solid var(--border)',background:'transparent',color:'var(--w60)',fontFamily:'Jost,sans-serif',fontSize:'12px',fontWeight:400,letterSpacing:'2px',textTransform:'uppercase',cursor:'pointer',borderRadius:'2px'}}>
                   ‹ Retour
                 </button>
-                <button className="btn-cta" onClick={submit} disabled={loading} style={{...btnCta,flex:1,opacity:loading?.7:1,pointerEvents:loading?'none':'oto'}}>
+                <button className="btn-cta" onClick={submit} disabled={loading} style={{...btnCta,flex:1,opacity:loading?.7:1,pointerEvents:loading?'none':'auto'}}>
                   {loading ? 'Enregistrement…' : 'Rejoindre le mouvement'}
                 </button>
               </div>
