@@ -180,7 +180,7 @@ export default function InscriptionForm() {
       <div className="shell" style={{display:'grid',gridTemplateColumns:'380px 1fr',minHeight:'100vh',position:'relative',zIndex:2}}>
 
         {/* ══ SIDEBAR ══ */}
-        <aside style={{background:'var(--ink-2)',borderRight:'1px solid var(--border)',padding:'52px 44px',display:'flex',flexDirection:'column',position:'sticky',top:0,height:'100vh',overflow:'hidden'}}>
+        <aside style={{background:'rgba(8,8,8,0.75)',backdropFilter:'blur(20px)',WebkitBackdropFilter:'blur(20px)',borderRight:'1px solid var(--border)',padding:'52px 44px',display:'flex',flexDirection:'column',position:'sticky',top:0,height:'100vh',overflow:'hidden'}}>
           <div style={{position:'absolute',top:0,right:'-1px',width:'1px',height:'100%',background:'linear-gradient(180deg,transparent 0%,var(--gold) 30%,var(--gold) 70%,transparent 100%)'}}/>
           <div style={{position:'absolute',bottom:'-120px',left:'-80px',width:'360px',height:'360px',background:'radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%)',pointerEvents:'none'}}/>
 
