@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Générer un numéro de référence unique
-    const ref = `ACI-2025-${Date.now().toString(36).toUpperCase()}`;
+    const ref = `ACI-2026-${Date.now().toString(36).toUpperCase()}`;
 
     const payload = {
       ref_number:           ref,
