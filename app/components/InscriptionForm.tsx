@@ -117,8 +117,8 @@ export default function InscriptionForm() {
 
   /* ── Share ── */
   const share = () => {
-    const msg = 'Je viens de rejoindre otoCI — un mouvement pour un financement oto direct en Côte d\'Ivoire, sans les 18% des banques. Rejoins-nous !';
-    if (navigator.share) navigator.share({title:'otoCI', text:msg, url:window.location.href});
+    const msg = 'Je viens de rejoindre KOLEKTIF — un mouvement pour un financement oto direct en Côte d\'Ivoire, sans les 18% des banques. Rejoins-nous !';
+    if (navigator.share) navigator.share({title:'KOLEKTIF', text:msg, url:window.location.href});
     else { navigator.clipboard.writeText(window.location.href); toast('Lien copié ✦'); }
   };
 
