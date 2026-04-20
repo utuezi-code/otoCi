@@ -40,3 +40,8 @@ body::before {
 @media (max-width: 960px) {
   body { cursor: auto; }
 }
+
+/* Car background mobile */
+@media (max-width: 960px) {
+  .car-bg-wrap { opacity: 0.08 !important; bottom: 0 !important; }
+}

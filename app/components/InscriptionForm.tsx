@@ -169,23 +169,46 @@ export default function InscriptionForm() {
         .btn-cta:hover::before { left:100% !important; }
         @keyframes spin { to{transform:rotate(360deg)} }
         @media(max-width:960px){
-          .shell{grid-template-columns:1fr !important}
-          .sidebar{position:relative !important;height:auto !important}
-          .snav,.sb-desc{display:none !important}
+          .shell{
+            display:flex !important;
+            flex-direction:column !important;
+            grid-template-columns:unset !important;
+          }
+          .sidebar{
+            position:relative !important;
+            height:auto !important;
+            min-height:unset !important;
+            max-height:160px !important;
+            padding:20px 24px !important;
+            flex-direction:row !important;
+            align-items:center !important;
+            justify-content:space-between !important;
+            border-right:none !important;
+            border-bottom:1px solid var(--border) !important;
+            overflow:hidden !important;
+          }
+          .sb-body{display:none !important}
           .sb-counter{display:none !important}
+          .snav,.sb-desc{display:none !important}
+          .logo-mb{display:flex !important}
+          .sidebar-accent-line{display:none !important}
           .g2,.g3{grid-template-columns:1fr !important}
+          .main-content{padding:28px 20px !important;max-width:100% !important}
+          .form-title-h2{font-size:30px !important}
+          .radios{gap:8px !important}
+          .mobile-counter{display:flex !important}
         }
       `}</style>
 
       <div className="shell" style={{display:'grid',gridTemplateColumns:'380px 1fr',minHeight:'100vh',position:'relative',zIndex:2}}>
 
         {/* ══ SIDEBAR ══ */}
-        <aside style={{background:'rgba(8,8,8,0.75)',backdropFilter:'blur(20px)',WebkitBackdropFilter:'blur(20px)',borderRight:'1px solid var(--border)',padding:'52px 44px',display:'flex',flexDirection:'column',position:'sticky',top:0,height:'100vh',overflow:'hidden'}}>
+        <aside className="sidebar" style={{background:'rgba(8,8,8,0.75)',backdropFilter:'blur(20px)',WebkitBackdropFilter:'blur(20px)',borderRight:'1px solid var(--border)',borderBottom:'1px solid var(--border)',padding:'52px 44px',display:'flex',flexDirection:'column',position:'sticky',top:0,height:'100vh',overflow:'hidden'}}>
           <div style={{position:'absolute',top:0,right:'-1px',width:'1px',height:'100%',background:'linear-gradient(180deg,transparent 0%,var(--gold) 30%,var(--gold) 70%,transparent 100%)'}}/>
           <div style={{position:'absolute',bottom:'-120px',left:'-80px',width:'360px',height:'360px',background:'radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%)',pointerEvents:'none'}}/>
 
           {/* Logo */}
-          <div style={{display:'flex',alignItems:'center',gap:'14px',marginBottom:'72px'}}>
+          <div className="logo-mb" style={{display:'flex',alignItems:'center',gap:'14px',marginBottom:'72px'}}>
             <div style={{width:'36px',height:'36px',border:'1px solid var(--gold-line)',display:'flex',alignItems:'center',justifyContent:'center',position:'relative'}}>
               <div style={{position:'absolute',inset:'4px',border:'1px solid var(--gold-dim)'}}/>
               <span style={{fontFamily:'Cormorant Garamond,serif',fontSize:'16px',fontWeight:700,color:'var(--gold)',position:'relative',zIndex:1}}>A</span>
@@ -193,6 +216,14 @@ export default function InscriptionForm() {
             <span style={{fontFamily:'Cormorant Garamond,serif',fontSize:'22px',fontWeight:600,letterSpacing:'3px',textTransform:'uppercase'}}>
               Auto<span style={{color:'var(--gold)'}}>CI</span>
             </span>
+          </div>
+          {/* Mobile counter badge */}
+          <div className="mobile-counter" style={{display:'none',flexDirection:'column',alignItems:'flex-end'}}>
+            <span style={{fontFamily:'Cormorant Garamond,serif',fontSize:'28px',fontWeight:700,color:'var(--gold-2)',lineHeight:1}}>{counter.toLocaleString('fr-FR')}</span>
+            <span style={{fontSize:'9px',letterSpacing:'2px',textTransform:'uppercase',color:'var(--w30)',marginTop:'3px'}}>inscrits · obj. 5 000</span>
+            <div style={{width:'80px',height:'2px',background:'var(--border)',marginTop:'8px'}}>
+              <div style={{height:'100%',background:'linear-gradient(90deg,var(--gold),var(--gold-3))',width:`${pct}%`}}/>
+            </div>
           </div>
 
           {/* Body */}
@@ -249,7 +280,7 @@ export default function InscriptionForm() {
         </aside>
 
         {/* ══ MAIN ══ */}
-        <main style={{padding:'60px 72px',display:'flex',flexDirection:'column',maxWidth:'760px'}}>
+        <main className="main-content" style={{padding:'60px 72px',display:'flex',flexDirection:'column',maxWidth:'760px',width:'100%'}}>
           {/* Progress pips */}
           <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:'56px'}}>
             <span style={{fontSize:'11px',fontWeight:400,letterSpacing:'3px',textTransform:'uppercase',color:'var(--w30)'}}>Inscription</span>
@@ -478,7 +509,7 @@ function FormHead({tag,title,sub}:{tag:string;title:React.ReactNode;sub:string})
       <div style={{fontSize:'10px',fontWeight:500,letterSpacing:'4px',textTransform:'uppercase',color:'var(--gold)',marginBottom:'20px',display:'flex',alignItems:'center',gap:'14px'}}>
         {tag}<div style={{maxWidth:'40px',flex:1,height:'1px',background:'var(--gold-line)'}}/>
       </div>
-      <h2 style={{fontFamily:'Cormorant Garamond,serif',fontSize:'48px',fontWeight:300,lineHeight:1.1,letterSpacing:'-.5px',marginBottom:'14px'}}>{title}</h2>
+      <h2 className="form-title-h2" style={{fontFamily:'Cormorant Garamond,serif',fontSize:'48px',fontWeight:300,lineHeight:1.1,letterSpacing:'-.5px',marginBottom:'14px'}}>{title}</h2>
       <p style={{fontSize:'14px',fontWeight:300,lineHeight:1.9,color:'var(--w60)'}}>{sub}</p>
     </div>
   );

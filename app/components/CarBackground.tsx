@@ -219,3 +219,4 @@ export default function CarBackground() {
     </div>
   );
 }
+// Note: mobile styles added via global CSS
