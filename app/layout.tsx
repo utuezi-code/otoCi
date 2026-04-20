@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'AutoCI — Rejoignez le Mouvement',
-  description: 'Mouvement collectif pour un financement auto direct en Côte d\'Ivoire, sans les 18% des banques.',
+  title: 'otoCI — Rejoignez le Mouvement',
+  description: 'Mouvement collectif pour un financement oto direct en Côte d\'Ivoire, sans les 18% des banques.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

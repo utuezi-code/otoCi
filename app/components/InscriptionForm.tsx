@@ -117,8 +117,8 @@ export default function InscriptionForm() {
 
   /* ── Share ── */
   const share = () => {
-    const msg = 'Je viens de rejoindre AutoCI — un mouvement pour un financement auto direct en Côte d\'Ivoire, sans les 18% des banques. Rejoins-nous !';
-    if (navigator.share) navigator.share({title:'AutoCI', text:msg, url:window.location.href});
+    const msg = 'Je viens de rejoindre otoCI — un mouvement pour un financement oto direct en Côte d\'Ivoire, sans les 18% des banques. Rejoins-nous !';
+    if (navigator.share) navigator.share({title:'otoCI', text:msg, url:window.location.href});
     else { navigator.clipboard.writeText(window.location.href); toast('Lien copié ✦'); }
   };
 
@@ -176,7 +176,7 @@ export default function InscriptionForm() {
           }
           .sidebar{
             position:relative !important;
-            height:auto !important;
+            height:oto !important;
             min-height:unset !important;
             max-height:160px !important;
             padding:20px 24px !important;
@@ -214,7 +214,7 @@ export default function InscriptionForm() {
               <span style={{fontFamily:'Cormorant Garamond,serif',fontSize:'16px',fontWeight:700,color:'var(--gold)',position:'relative',zIndex:1}}>A</span>
             </div>
             <span style={{fontFamily:'Cormorant Garamond,serif',fontSize:'22px',fontWeight:600,letterSpacing:'3px',textTransform:'uppercase'}}>
-              Auto<span style={{color:'var(--gold)'}}>CI</span>
+              oto<span style={{color:'var(--gold)'}}>CI</span>
             </span>
           </div>
           {/* Mobile counter badge */}
@@ -355,7 +355,7 @@ export default function InscriptionForm() {
               </div>
 
               <Consent checked={consent1} onChange={setConsent1}>
-                J&apos;accepte que mes informations soient utilisées de manière <strong style={{color:'var(--gold-2)'}}>agrégée et anonymisée</strong> pour constituer un dossier collectif destiné à des constructeurs automobiles.
+                J&apos;accepte que mes informations soient utilisées de manière <strong style={{color:'var(--gold-2)'}}>agrégée et anonymisée</strong> pour constituer un dossier collectif destiné à des constructeurs otomobiles.
               </Consent>
 
               <div style={actionsStyle}>
@@ -446,7 +446,7 @@ export default function InscriptionForm() {
                 <button onClick={() => { setStep(1); window.scrollTo({top:0,behavior:'smooth'}); }} style={{padding:'15px 28px',border:'1px solid var(--border)',background:'transparent',color:'var(--w60)',fontFamily:'Jost,sans-serif',fontSize:'12px',fontWeight:400,letterSpacing:'2px',textTransform:'uppercase',cursor:'pointer',borderRadius:'2px'}}>
                   ‹ Retour
                 </button>
-                <button className="btn-cta" onClick={submit} disabled={loading} style={{...btnCta,flex:1,opacity:loading?.7:1,pointerEvents:loading?'none':'auto'}}>
+                <button className="btn-cta" onClick={submit} disabled={loading} style={{...btnCta,flex:1,opacity:loading?.7:1,pointerEvents:loading?'none':'oto'}}>
                   {loading ? 'Enregistrement…' : 'Rejoindre le mouvement'}
                 </button>
               </div>

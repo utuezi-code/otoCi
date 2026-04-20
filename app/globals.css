@@ -38,7 +38,7 @@ body::before {
 }
 
 @media (max-width: 960px) {
-  body { cursor: auto; }
+  body { cursor: oto; }
 }
 
 /* Car background mobile */

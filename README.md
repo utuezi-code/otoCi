@@ -1,6 +1,6 @@
-# AutoCI — Plateforme d'inscription
+# otoCI — Plateforme d'inscription
 
-Mouvement collectif pour un financement auto direct en Côte d'Ivoire, sans les 18% des banques.
+Mouvement collectif pour un financement oto direct en Côte d'Ivoire, sans les 18% des banques.
 
 ## Architecture sécurisée
 
