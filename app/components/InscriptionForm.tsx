@@ -211,10 +211,10 @@ export default function InscriptionForm() {
           <div className="logo-mb" style={{display:'flex',alignItems:'center',gap:'14px',marginBottom:'72px'}}>
             <div style={{width:'36px',height:'36px',border:'1px solid var(--gold-line)',display:'flex',alignItems:'center',justifyContent:'center',position:'relative'}}>
               <div style={{position:'absolute',inset:'4px',border:'1px solid var(--gold-dim)'}}/>
-              <span style={{fontFamily:'Cormorant Garamond,serif',fontSize:'16px',fontWeight:700,color:'var(--gold)',position:'relative',zIndex:1}}>A</span>
+              <span style={{fontFamily:'Cormorant Garamond,serif',fontSize:'16px',fontWeight:700,color:'var(--gold)',position:'relative',zIndex:1}}>K</span>
             </div>
             <span style={{fontFamily:'Cormorant Garamond,serif',fontSize:'22px',fontWeight:600,letterSpacing:'3px',textTransform:'uppercase'}}>
-              oto<span style={{color:'var(--gold)'}}>CI</span>
+            KOLEK<span style={{color:'var(--gold)'}}>TIF</span>
             </span>
           </div>
           {/* Mobile counter badge */}
@@ -230,7 +230,7 @@ export default function InscriptionForm() {
           <div className="sb-body" style={{flex:1,display:'flex',flexDirection:'column',justifyContent:'center'}}>
             <div style={{fontSize:'10px',fontWeight:500,letterSpacing:'4px',textTransform:'uppercase',color:'var(--gold)',marginBottom:'22px',display:'flex',alignItems:'center',gap:'12px'}}>
               <div style={{width:'24px',height:'1px',background:'var(--gold)'}}/>
-              Côte d&apos;Ivoire · 2025
+              Côte d&apos;Ivoire · 2026
             </div>
             <h1 style={{fontFamily:'Cormorant Garamond,serif',fontSize:'48px',fontWeight:300,lineHeight:1.1,letterSpacing:'-.5px',marginBottom:'28px'}}>
               Ensemble,<br/>changeons les<br/><strong style={{fontWeight:700,fontStyle:'italic',color:'var(--gold-2)'}}>règles du jeu.</strong>
